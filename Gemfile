@@ -26,12 +26,13 @@ gem 'bootsnap', require: false
 
 group :development, :test do
   gem 'debug', platforms: %i[mri mswin mswin64 mingw x64_mingw]
+  gem 'error_highlight', '>= 0.4.0', platforms: [:ruby]
   gem 'pg'
 end
 
 group :development do
-  gem 'web-console'
   gem 'error_highlight', '>= 0.4.0', platforms: [:ruby]
+  gem 'web-console'
 end
 
 group :test do
