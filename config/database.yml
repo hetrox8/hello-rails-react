@@ -1,0 +1,19 @@
+default: &default
+  adapter: postgresql
+  encoding: LATIN1  # Change this line to use LATIN1 encoding
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  host: localhost
+  username: suleiman
+  password: 1234
+
+development:
+  <<: *default
+  database: hello-react-rails
+
+test:
+  <<: *default
+  database: db/hello-react-rails
+
+production:
+  <<: *default
+  url: <%= ENV['DATABASE_URL'] %>
